@@ -1,0 +1,171 @@
+.admin-panel {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+
+
+  &_container {
+    margin: 10%;
+    display: flex;
+    width: 80%;
+    height: fit-content;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+
+    &>* {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+    }
+  }
+
+  &_info {
+    padding: 5%;
+    background-color: var(--second-color);
+    color: #fff;
+
+    &>* {
+      display: flex;
+    }
+
+    .random-advice_title {
+      font-size: 25px;
+    }
+
+    .random-advice_text-container {
+      padding: 10px 0;
+      height: 150px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+  }
+
+  &_welcome {
+    margin-bottom: 20px;
+  }
+
+
+
+  &_text {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .button-back {
+    margin-top: 40px;
+    width: fit-content;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 2px solid #fafafa;
+    font-size: 15px;
+    color: var(--third-color);
+    line-height: 1;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+  }
+
+  &_login {
+    background-color: #fff;
+    padding: 5%;
+
+    .login-panel {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .admin-panel_text {
+      margin: 5px 0;
+    }
+
+    .login-input,
+    .password-input {
+      margin-bottom: 20px;
+      width: 70%;
+      padding: 10px;
+    }
+
+    .login-btn {
+      align-items: flex-start;
+      margin-top: 20px;
+      width: fit-content;
+      padding: 8px 16px;
+      background-color: var(--second-color);
+      border: 2px solid var(--second-color);
+      font-size: 15px;
+      color: #fff;
+      line-height: 1;
+      border-radius: 25px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--second-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .admin-panel {
+    &_login {
+
+      .login-input,
+      .password-input {
+        width: 80%;
+      }
+    }
+
+    &_container {
+      margin: 0%;
+      width: 100%;
+    }
+
+    &_text {
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+    .random-advice_title {
+      font-size: 20px;
+    }
+
+    .random-advice_text-container {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 481px) {
+  .admin-panel {
+    &_container {
+      flex-direction: column;
+
+      &>* {
+        width: 100%;
+      }
+
+      .admin-panel_login {
+        order: 1;
+      }
+
+      .admin-panel_info {
+        margin-top: 50px;
+      }
+    }
+  }
+}

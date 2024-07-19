@@ -1,0 +1,209 @@
+.about-me {
+  width: 100vw;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: Montserrat, sans-serif;
+
+  &_header {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_name {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: $fs-s;
+  }
+
+  &_animation {
+    display: flex;
+    padding: 10px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: $fs-xxl;
+    font-family: 'Abel', sans-serif;
+    line-height: 90%;
+
+    div {
+      width: 100%;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      height: calc(0.9 * 3.6rem * 2);
+      overflow: hidden;
+    }
+
+    span {
+      display: block;
+      animation: spin_words 6s infinite;
+    }
+  }
+
+  &_photo {
+    width: 90vw;
+    max-width: 650px;
+    height: 90vw;
+    max-height: 650px;
+    background-image: url("../assets/profile_photo.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  &_who {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &_short {
+    margin: 10px 0;
+    width: 100%;
+    font-size: $fs-s;
+    line-height: 130%;
+    font-weight: 700;
+  }
+
+  &_education {
+    width: 100%;
+    line-height: 120%;
+    margin: 5px 0;
+    font-size: $fs-s;
+  }
+
+  .keywords {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    &_header {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 5px 0;
+      font-size: $fs-m;
+    }
+
+    .keyword {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+      width: 100%;
+
+      &_word {
+        text-transform: uppercase;
+        font-size: $fs-xxl;
+        font-weight: 600;
+        font-family: 'Abel', sans-serif;
+        line-height: 80%;
+        letter-spacing: -4px;
+      }
+
+      &_short-sentence {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: $fs-s;
+        line-height: 130%;
+        letter-spacing: normal;
+        color: #111;
+      }
+    }
+  }
+}
+
+@keyframes spin_words {
+  10% {
+    transform: translateY(-212%);
+  }
+
+  25% {
+    transform: translateY(-200%);
+  }
+
+  35% {
+    transform: translateY(-412%);
+  }
+
+  50% {
+    transform: translateY(-400%);
+  }
+
+  60% {
+    transform: translateY(-612%);
+  }
+
+  75% {
+    transform: translateY(-600%);
+  }
+
+  85% {
+    transform: translateY(-812%);
+  }
+
+  100% {
+    transform: translateY(-800%);
+  }
+}
+
+@media (min-width: 481px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 25px;
+  }
+
+  .about-me {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &_header {
+      margin-left: 10px;
+      flex-grow: 1;
+    }
+
+    &_animation {
+      flex-grow: 1;
+      justify-content: center;
+      font-size: $fs-xl;
+
+      div {
+        height: calc(0.9 * 3rem * 2);
+      }
+    }
+
+    &_photo {
+      width: 40vw;
+      height: 40vw;
+      order: -1;
+    }
+
+    .keywords {
+      .keyword {
+        flex-direction: row;
+        padding: 20px 0;
+
+        &_short-sentence {
+          display: flex;
+          align-items: flex-end;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 30px;
+  }
+
+  .about-me {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,11 @@
+.section-header {
+  width: 100px;
+  height: $fs-s;
+  font-size: $fs-xs;
+  line-height: $fs-s;
+  text-align: center;
+  background-color: var(--first-color);
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
