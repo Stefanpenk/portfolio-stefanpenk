@@ -87,6 +87,14 @@
       background-image: url(../assets/projects/project4.jpg);
     }
 
+    &.monster {
+      background-image: url(../assets/projects/project6.jpg);
+    }
+
+    &.crwn {
+      background-image: url(../assets/projects/project8.jpg);
+    }
+
     &:hover {
       transform: scale(1.04);
       cursor: pointer;

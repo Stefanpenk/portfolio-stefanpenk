@@ -48,5 +48,3 @@ function watchTask() {
 }
 
 exports.default = series(jsmin, optimizeimg, watchTask);
-
-exports.build = series(jsmin, optimizeimg);
